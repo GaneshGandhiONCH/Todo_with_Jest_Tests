@@ -1,0 +1,56 @@
+@import "~bootstrap/scss/bootstrap";
+$none: none !important;
+
+%rounded {
+  border-radius: $none;
+}
+
+%flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  .space-top-10 {
+    margin-top: 10px;
+  }
+
+  .space-top-20 {
+    margin-top: 20px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .custom-standard.form-control {
+    @extend %rounded;
+    border-top: $none;
+    border-left: $none;
+    border-right: $none;
+  }
+
+  .custom-standard.form-control:focus {
+    @extend %rounded;
+    box-shadow: $none;
+  }
+
+  // error
+  .custom-error.form-text {
+    color: red;
+  }
+  .hstack {
+    align-items: flex-start !important;
+  }
+  .list-title {
+    @extend %flexRow;
+    justify-content: space-between;
+    .action-icons {
+      @extend %flexRow;
+      gap: 20px;
+      .icon {
+        cursor: pointer;
+      }
+    }
+  }
+}
